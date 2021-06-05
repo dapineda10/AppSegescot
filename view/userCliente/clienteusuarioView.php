@@ -1,0 +1,1 @@
+<div class="container col-xs-12 col-lg-8 col-lg-offset-2" style="text-align: center; margin-top: 200px">Bienvenido</div>
