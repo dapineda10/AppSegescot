@@ -48,11 +48,10 @@
                                     <input class="input precios form-control" id="precio1" placeholder="Precio 1" type="text">
                                 </div>
                             </div>
-
-                            <div><p>Tipo por Presentacion</p></div>
-                            <div> <input class="form-control" type="text" id="prd_costo"  name="prd_tipoPresentacion" required></div>
                         </div>
                         <div class="col-xs-12 col-lg-5">
+							<div><p>Presentación del producto</p></div>
+                            <div> <input class="form-control" type="text" id="prd_costo"  name="prd_tipoPresentacion" required></div>
                             <div> <p>Nombre</p></div>
                             <div> <input class="form-control" type="text" id="prd_nombre"  name="prd_nombre" required></div>
                             <div> <p>Descripcion</p></div>
@@ -69,8 +68,9 @@
                                 <label for="foto">Seleccione una Foto</label>
                                 <input name="foto" type="file" class="file" multiple=true data-preview-file-type="any">
                             
-                                </form>
-                            <input type="submit" class="btn btn-success" onclick="GetTextValue()">
+                            </form>
+							<br>
+                            <input type="submit" class="btn btn-success col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1" onclick="GetTextValue()">
                         </div>
                     </div>
             </div>
