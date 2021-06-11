@@ -4,7 +4,7 @@
                 <form  enctype="multipart/form-data" id="crearproduct"  method="POST" action="<?php echo'index.php?controller=Producto&action=crearproducto'; ?>">
                     <div class="row">
                         <div class="col-xs-12 col-lg-5 col-lg-offset-1">
-                            <div><p>Id Producto</p></div>
+                            <div><p>Código de Producto</p></div>
                             <div><input type="text" class="form-control" id="prd_codigoProducto"  name="prd_codigoProducto" required></div>
 
                             <div><p>Categoria</p></div>
