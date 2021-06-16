@@ -1677,3 +1677,25 @@ $(function () {
             window.location = "index.php?controller=Reportes&action=mostrarReportes";
     });
 }
+
+$(document).ready(function(){
+	$("#prd_codigoProducto").change(function(){
+        $.ajax({
+            // la URL para la petición
+            url : 'index.php?controller=Producto&action=ConsultarProductoRepetido',
+            data : { id : $("#prd_codigoProducto").val() },
+            type : 'POST',
+            dataType : 'json',
+            success:function(data){
+                if(data.estado == 'ok')
+                {
+                    document.getElementById("ProductoRepetido").style.display = "block";
+                    document.getElementById("ProductoRepetido").style.color = "red";
+                }
+            },
+            error:function(data){
+                document.getElementById("ProductoRepetido").style.display = "none";
+            }
+        })
+    })
+})

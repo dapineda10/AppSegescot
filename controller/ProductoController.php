@@ -244,6 +244,23 @@ class ProductoController extends ControladorBase {
         echo json_encode($valor);
     }
 
+    public function ConsultarProductoRepetido() {
+        $data = array();
+        $productomostrar = new Producto($this->adapter);
+        $id = (String) $_POST["id"];
+        $valor = $productomostrar->getById($id, "prd_codigoProducto");
+
+        if($valor == null){
+            $data['estado'] = 'error';
+            $data['result'] = '';
+        }else{
+            $data['estado'] = 'ok';
+            $data['result'] = $valor;
+        }
+        
+        echo json_encode($data);
+    }
+
     public function borrar() {
         if (isset($_GET["id"])) {
             $id = (String) $_GET["id"];
@@ -280,6 +297,7 @@ public function BuscarCantidadProducto() {
         $CantidadRegistros = new Producto($this->adapter);
         $CantidadRegistros = $CantidadRegistros->cantidadderegistros();
         echo json_encode($CantidadRegistros);
+        
     }
 
     //Jhonatan Cuartas

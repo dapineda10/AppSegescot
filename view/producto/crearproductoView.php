@@ -6,6 +6,7 @@
                         <div class="col-xs-12 col-lg-5 col-lg-offset-1">
                             <div><p>Código de Producto</p></div>
                             <div><input type="text" class="form-control" id="prd_codigoProducto"  name="prd_codigoProducto" required></div>
+                            <label style = "display:none" id= "ProductoRepetido">Este producto ya existe</label>
 
                             <div><p>Categoria</p></div>
                             <div><select type="text" id="cat_idCategoria"  name="cat_idCategoria" class="form-control selcls" required>
