@@ -71,7 +71,7 @@
                             
                             </form>
 							<br>
-                            <input type="submit" class="btn btn-success col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1" onclick="GetTextValue()">
+                            <input type="submit" id="btnAddProduct" class="btn btn-success col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1" onclick="GetTextValue()">
                         </div>
                     </div>
             </div>

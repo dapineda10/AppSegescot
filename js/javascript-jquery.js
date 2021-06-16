@@ -1691,10 +1691,18 @@ $(document).ready(function(){
                 {
                     document.getElementById("ProductoRepetido").style.display = "block";
                     document.getElementById("ProductoRepetido").style.color = "red";
+                    document.getElementById("btnAddProduct").disabled = true;
+                    document.getElementById("btAdd").disabled = true;
+                    document.getElementById("btRemove").disabled = true;
+                    document.getElementById("btnRemoveAll").disabled = true;
                 }
             },
             error:function(data){
                 document.getElementById("ProductoRepetido").style.display = "none";
+                document.getElementById("btnAddProduct").disabled = false;
+                document.getElementById("btAdd").disabled = false;
+                document.getElementById("btRemove").disabled = false;
+                document.getElementById("btnRemoveAll").disabled = false;
             }
         })
     })
