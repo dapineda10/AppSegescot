@@ -243,4 +243,20 @@ class ClienteController extends ControladorBase {
         echo json_encode($allclient);
     }
 
+    public function ConsultarClienteRepetido() {
+        $data = array();
+        $cliente = new Cliente($this->adapter);
+        $id = (String) $_POST["id"];
+        $valor = $cliente->getById($id, "cli_documento");
+
+        if($valor == null){
+            $data['estado'] = 'error';
+            $data['result'] = '';
+        }else{
+            $data['estado'] = 'ok';
+            $data['result'] = $valor;
+        }
+        
+        echo json_encode($data);
+    }
 }

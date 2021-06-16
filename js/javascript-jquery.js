@@ -1707,3 +1707,27 @@ $(document).ready(function(){
         })
     })
 })
+
+$(document).ready(function(){
+	$("#cli_documento").change(function(){
+        $.ajax({
+            // la URL para la petición
+            url : 'index.php?controller=Cliente&action=ConsultarClienteRepetido',
+            data : { id : $("#cli_documento").val() },
+            type : 'POST',
+            dataType : 'json',
+            success:function(data){
+                if(data.estado == 'ok')
+                {
+                    document.getElementById("ClienteRepetido").style.display = "block";
+                    document.getElementById("ClienteRepetido").style.color = "red";
+                    document.getElementById("btnAddClient").disabled = true;
+                }
+            },
+            error:function(data){
+                document.getElementById("ClienteRepetido").style.display = "none";
+                document.getElementById("btnAddClient").disabled = false;
+            }
+        })
+    })
+})

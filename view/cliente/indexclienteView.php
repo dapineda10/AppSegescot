@@ -5,7 +5,8 @@ para ingresar al modulo de servicio al cliente, igualmente el mismo nombre de us
     <div class="panel-body container col-xs-12 col-lg-offset-1 col-lg-10">
             <form method="POST" class="col-lg-offset-2" action="<?php echo "index.php?controller=cliente&action=crearcliente"; ?>" >
                 <div class="divcontorno col-xs-12 col-xs-offset-2 col-lg-10" tabindex="0" data-toggle="tooltip" title="Sólo datos numericos">
-                    <input  type="number" class="form-control" name="cli_documento" placeholder="Nit o documento*" required>
+                    <input  type="number" class="form-control" name="cli_documento" id="cli_documento" placeholder="Nit o documento*" required>
+                    <label style = "display:none" id= "ClienteRepetido">Este cliente ya existe</label>
                 </div>
                 <div class="divcontorno col-xs-12 col-lg-10"><input type="text"  class="form-control" name="cli_nombre" required placeholder="Nombre de cliente"></div>
                 <div class="divcontorno col-xs-12 col-lg-10"><input type="text" class="form-control" name="cli_direccion" required placeholder="Dirección*"></div>
@@ -19,7 +20,7 @@ para ingresar al modulo de servicio al cliente, igualmente el mismo nombre de us
                 <!--Se envía value 0 para saber que es un cliente normal y no un cliente potencial, sirve como marca-->
                 <input type="hidden" name="cli_tipocliente" value="0">
                 <input type="hidden" name="cli_antes_cliente_potencial" value="0">
-                <div class="col-xs-10 col-xs-offset-2 col-lg-10"><br><input type="submit" class="btn btn-primary col-xs-10 col-lg-6 col-lg-offset-1" name="enviarcliente" value="Crear"></div>
+                <div class="col-xs-10 col-xs-offset-2 col-lg-10"><br><input type="submit" class="btn btn-primary col-xs-10 col-lg-6 col-lg-offset-1" name="enviarcliente" id="btnAddClient" value="Crear"></div>
             </form>
     </div>
 </div>
